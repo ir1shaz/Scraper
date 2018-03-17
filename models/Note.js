@@ -1,10 +1,10 @@
 // Require mongoose
 var mongoose = require("mongoose");
-_____________________________________________
+//_____________________________________________
 
 // Create a schema class
 var Schema = mongoose.Schema;
-_____________________________________________
+//_____________________________________________
 
 // Create the Note schema
 var NoteSchema = new Schema({
@@ -17,7 +17,7 @@ var NoteSchema = new Schema({
     type: String
   }
 });
-_____________________________________________
+//_____________________________________________
 
 // Create the Note model with the NoteSchema
 var Note = mongoose.model("Note", NoteSchema);

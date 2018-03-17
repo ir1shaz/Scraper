@@ -10,7 +10,7 @@ function scrapeNews () {
 
     });
 }
-__________________________________________________________________________
+//__________________________________________________________________________
 function getNews () {
   console.log('in getNews');
     $.getJSON("/News", function(data) {
@@ -26,7 +26,7 @@ function getNews () {
 }
 
 scrapeNews();
-__________________________________________________________________________
+//__________________________________________________________________________
 // Whenever someone clicks the P Divs
 $(document).on("click", "p", function() {
   // Clear out the notes section 
@@ -39,7 +39,7 @@ $(document).on("click", "p", function() {
     method: "GET",
     url: "/News/" + thisId
   })
-    // With that done, add the note information to the page
+    // Add notes
     .done(function(data) {
       console.log(data);
       // The title of the News
@@ -57,7 +57,7 @@ $(document).on("click", "p", function() {
       }
     });
 });
-_____________________________________________________________________________
+//_____________________________________________________________________________
 // Onclick for save note
 $(document).on("click", "#savenote", function() {
   // Grab the id associated with the article from the submit button
@@ -80,7 +80,7 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the textarea for note entry
   $("#bodyinput").val("");
 });
-______________________________________________________________________________
+//______________________________________________________________________________
 // Onclick for delete note
 $(document).on("click", "#deletenote", function() {
   // Grab the id associated with the article from the submit button

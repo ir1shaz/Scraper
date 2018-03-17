@@ -44,12 +44,12 @@ router.get('/', function (req, res) {
 router.get('/index', function (req, res) {
     res.render("index");
   });
-_______________________________________________________________________
+//_______________________________________________________________________
 
 // A GET request to scrape the News
 router.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request 
-  request("https://www.reddit.com/r/webdev/", function(error, response, html) {
+  request("https://news.google.com/news/?ned=us&gl=US&hl=en", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     $("p.title").each(function(i, element) {
@@ -95,7 +95,7 @@ router.get("/scrape", function(req, res) {
   // Tell the browser that we finished scraping the text
   res.json({});
 });
-________________________________________________________________________
+//________________________________________________________________________
 
 // This will get the News we scraped from the mongoDB
 router.get("/News", function(req, res) {
@@ -111,7 +111,7 @@ router.get("/News", function(req, res) {
     }
   });
 });
-_________________________________________________________________________
+//_________________________________________________________________________
 
 // Grab an News by it's ObjectId
 router.get("/News/:id", function(req, res) {
@@ -131,7 +131,7 @@ router.get("/News/:id", function(req, res) {
     }
   });
 });
-_________________________________________________________________________
+//_________________________________________________________________________
 
 // Create a new note or replace an existing note
 router.post("/News/:id", function(req, res) {

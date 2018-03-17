@@ -1,9 +1,9 @@
 // Require mongoose
 var mongoose = require("mongoose");
-_____________________________________________
+//_____________________________________________
 // Create Schema class
 var Schema = mongoose.Schema;
-_____________________________________________
+//_____________________________________________
 
 // Create News schema
 var Newschema = new Schema({
@@ -23,8 +23,7 @@ var Newschema = new Schema({
     ref: "Note"
   }
 });
-_____________________________________________
-
+//_____________________________________________
 // Create the News model with the Newschema
 var News = mongoose.model("News", Newschema);
 

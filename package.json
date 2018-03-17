@@ -11,12 +11,28 @@
     "url": "git+https://github.com/ir1shaz/Scraper.git"
   },
   "keywords": [
-    "\"Node.js\""
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Cheerio"
   ],
-  "author": "\"Express.js\",",
+  "author": "Andy John Sargent,",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ir1shaz/Scraper/issues"
   },
-  "homepage": "https://github.com/ir1shaz/Scraper#readme"
+  "homepage": "https://github.com/ir1shaz/Scraper#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.7.1",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.79.0"
+  }
 }
