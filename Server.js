@@ -1,6 +1,6 @@
-/* Set up the server.js file 
+// Set up the server.js file 
 //require npm packages, express, body-parser, methodOverride, path, express-handlebars and the handlebars engine
-*/
+
 // Setup my Dependencies
 var express = require('express');
 var bodyParser = require('body-parser');
