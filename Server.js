@@ -29,7 +29,7 @@ app.use(express.static(process.cwd() + '/public'));
 // per google ... BodyParser will make it easy for the server to read data sent to it ... pulled code... 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// MethodOverride.... override with POST having ?_method=DELETE
+// google again here ... MethodOverride.... override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
 
 //

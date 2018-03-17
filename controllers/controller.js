@@ -15,7 +15,7 @@ mongoose.Promise = Promise;
 var Note = require("../models/Note.js");
 var News = require("../models/News.js");
 
-//Mongod Heroku
+//Mongod DB
 var dbURI = 'mongodb://localhost/webscraping';
 
 if (process.env.NODE_ENV === 'production') {
@@ -49,7 +49,7 @@ router.get('/index', function (req, res) {
 // A GET request to scrape the News
 router.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request 
-  request("https://news.google.com/news/?ned=us&gl=US&hl=en", function(error, response, html) {
+  request("http://www.espn.com/", function(error, response, html) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(html);
     $("p.title").each(function(i, element) {
@@ -57,9 +57,8 @@ router.get("/scrape", function(req, res) {
       // Save an empty result object
       var result = {};
 
-      // Add the text and href of every link, and save them as properties of the result object - var result.title = $(element).children().text(); OR
+      // Add the text and href of every link, and save them as properties of the result object 
       result.title = $(this).children("a").text();
-      // var result.link = $(element).children().attr("href"); OR
       result.link = $(this).children("a").attr("href");
       // save News title and link if it is News and not a comment
       if (result.link.slice(0,4) == "http") {

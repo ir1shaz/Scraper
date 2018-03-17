@@ -18,8 +18,8 @@ function getNews () {
       // For each one
       for (var i = 0; i < data.length; i++) {
           // Display the information on the page
-          $("#News").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "</p>");
-          $("#News").append("<a data-id='" + data[i]._id + "' href='"   + data[i].link + "' target='about_blank'>" + data[i].link + "</a>");
+          $("#news").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "</p>");
+          $("#news").append("<a data-id='" + data[i]._id + "' href='"   + data[i].link + "' target='about_blank'>" + data[i].link + "</a>");
           console.log('\n\nappending News to page');
       }
     });

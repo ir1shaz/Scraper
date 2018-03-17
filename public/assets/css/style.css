@@ -36,20 +36,20 @@ body {
   width: 50%;
 }
 
-#articles p{
+#news p{
   margin-bottom: 0;
   margin-top: 20px;
 }
 
-#articles p:hover {
+#news p:hover {
   cursor: default;
 }
 
-#articles>a {
+#news>a {
   color: #2C82C9;
 }
 
-#articles>a:hover {
+#news>a:hover {
   cursor: pointer;
 }
 
