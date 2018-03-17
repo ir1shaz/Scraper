@@ -1,0 +1,22 @@
+{
+  "name": "scraper",
+  "version": "1.0.0",
+  "description": "News Scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ir1shaz/Scraper.git"
+  },
+  "keywords": [
+    "\"Node.js\""
+  ],
+  "author": "\"Express.js\",",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ir1shaz/Scraper/issues"
+  },
+  "homepage": "https://github.com/ir1shaz/Scraper#readme"
+}
